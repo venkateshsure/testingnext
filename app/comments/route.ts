@@ -17,7 +17,7 @@ import { comments } from './data'
 
 export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams
-    console.log("===========",searchParams,"===")
+    console.log("===========",searchParams,"=")
     const query =  searchParams.get('query')
     console.log("=====================================",query,"===============================")
     const filterComment = query  ? comments.filter(e=>e.id===Number(query)) :comments;
