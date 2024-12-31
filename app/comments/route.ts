@@ -21,5 +21,4 @@ export async function GET(request: NextRequest) {
     const query =  searchParams.get('query')
     console.log("=====================================",query,"===============================")
     const filterComment = query  ? comments.filter(e=>e.id===Number(query)) :comments;
-    return Response.json(filterComment);
-}
+    return Response.json(filterComment);}
